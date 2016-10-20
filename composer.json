@@ -11,5 +11,10 @@
       "type":"git",
       "url":"https://github.com/Danylov-Mykola/remotepics_gather"
     }
-  ]
+  ],
+  "autoload":{
+    "psr-4":{
+      "Classes\\":""
+    }
+  }
 }
