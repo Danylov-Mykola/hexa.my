@@ -6,4 +6,5 @@
  * Time: 14:16
  */
 require_once "vendor/autoload.php";
-new RemotePics\Test();
+new RemotePics\Test;
+new Model\Index;
