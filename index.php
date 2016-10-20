@@ -3,12 +3,7 @@
  * Created by PhpStorm.
  * User: N
  * Date: 20.10.2016
- * Time: 13:43
+ * Time: 14:16
  */
-
-namespace RemotePics;
-
-
-class Test {
-
-}
+require_once "vendor/autoload.php";
+new RemotePics\Test();

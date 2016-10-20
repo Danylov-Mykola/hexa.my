@@ -1,13 +1,15 @@
 {
-  "name": "mykola-danylov/remotepics_gather",
-  "description": "This is a package for hexa.com.ua testing work",
+  "name": "mykola-danylov/hexa.com",
+  "description": "This is for hexa.com.ua testing work",
   "version": "1.0.0",
   "require":{
-    "php":">=5.3.0"
+    "php":">=5.3.0",
+    "mykola-danylov/remotepics_gather":"dev-master"
   },
-  "autoload":{
-    "psr-4":{
-      "RemotePics\\":""
+  "repositories":[
+    {
+      "type":"git",
+      "url":"https://github.com/Danylov-Mykola/remotepics_gather"
     }
-  }
+  ]
 }
