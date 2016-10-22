@@ -3,7 +3,7 @@
   "description": "This is for hexa.com.ua testing work",
   "version": "1.0.0",
   "require":{
-    "php":">=5.3.0",
+    "php":">=5.5.0",
     "mykola-danylov/remotepics_gather":"dev-master"
   },
   "repositories":[
@@ -14,8 +14,9 @@
   ],
   "autoload":{
     "psr-4":{
-      "Controller\\":"Classes/Controller/",
+      "":"Classes/",
       "Model\\":"Classes/Model/"
     }
   }
 }
+

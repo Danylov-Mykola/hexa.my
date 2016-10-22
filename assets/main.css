@@ -1,0 +1,13 @@
+.picTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+.picTable td {
+    border: 1px solid;
+    width: 50%;
+}
+
+.picTable td img{
+    max-height: 300px;
+    max-width: 300px;
+}

@@ -1,0 +1,23 @@
+# Turn on URL rewriting
+RewriteEngine On
+
+# Installation directory
+RewriteBase /
+
+# Protect hidden files from being viewed
+<Files .*>
+	Order Deny,Allow
+	Deny From All
+</Files>
+
+# Allow any files or directories that exist to be displayed directly
+# ! when uncommenting the three lines below, comment two lines under them
+RewriteCond %{REQUEST_URI} !(.*)\.(?i:js|jpe?g|gif|bmp|png|css|swf|ttf|ico|txt|ogg|tpl|xml|pdf|tiff?|docx?|xlsx?|xps|rar|zip|gz|bz2?|7z)$
+RewriteCond %{REQUEST_URI} !((.*)media/plugins/tinymce/jscripts/tiny_mce)(.*)$
+RewriteCond %{REQUEST_URI} !^/google0c3fde080c0e4f1c.html$
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php/URL
+RewriteRule .* index.php?/$0 [PT,L,QSA]
