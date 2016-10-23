@@ -8,21 +8,24 @@
 
 namespace Model;
 
-use \MykolaDanylov\RemotePics as RemotePics;
+use \MykolaDanylov\RemotePics\RemotePicException;
+use \MykolaDanylov\RemotePics\WebSitePics;
 
 class Example {
     public static function getResult(){
-        $premiumcarPics = new RemotePics\WebSitePics('http://premiumcar.com.ua/', ['.jpg', '.png', '.gif'], '/storage/');
-
-        $picturesPathesArr = [];
         try {
-            $premiumcarPics->preparePagePictures('');
-            $premiumcarPics->preparePagePictures('/issues.html');
-            $picturesPathesArr = $premiumcarPics->getAllLocalPicsFilesList();
-        } catch (RemotePics\RemotePicException $e) {
+            return
+                WebSitePics::
+                    //Initialize remote site
+                    getStatic('http://premiumcar.com.ua/', ['.jpg', '.png', '.gif'], '/storage/')
+                    // Download pictures from certain pages
+                    ->preparePagePictures('')
+                    ->preparePagePictures('/issues.html')
+                    // Return list of pictures has been stored locally
+                    ->getAllLocalPicsFilesList();
+        } catch (RemotePicException $e) {
             echo $e->getMessage();
         }
-
-        return $picturesPathesArr;
+        return [];
     }
 }

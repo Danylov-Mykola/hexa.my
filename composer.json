@@ -1,7 +1,7 @@
 {
   "name": "mykola-danylov/hexa.com",
   "description": "This is for hexa.com.ua testing work",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "require":{
     "php":">=5.5.0",
     "mykola-danylov/remotepics_gather":"dev-master"
