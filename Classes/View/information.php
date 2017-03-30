@@ -1,4 +1,4 @@
-<h1>This is a sample work require external package.</h1>
+<h1>This is a sample work uses external package.</h1>
 <h2>Description</h2>
 <p>
     Реализация показывает две возможности: продемонстрировать использование композер-пакета
