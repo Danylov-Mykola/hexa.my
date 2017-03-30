@@ -1,17 +1,11 @@
 {
-  "name": "mykola-danylov/hexa.com",
-  "description": "This is for hexa.com.ua testing work",
+  "name": "mykola-danylov/starterMvc",
+  "description": "This is simple framework with outer package as example",
   "version": "1.0.1",
   "require":{
     "php":">=5.5.0",
     "mykola-danylov/remotepics_gather":"dev-master"
   },
-  "repositories":[
-    {
-      "type":"git",
-      "url":"https://github.com/Danylov-Mykola/remotepics_gather"
-    }
-  ],
   "autoload":{
     "psr-4":{
       "":"Classes/",
